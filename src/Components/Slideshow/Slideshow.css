@@ -1,0 +1,262 @@
+.slick-next,
+.slick-prev {
+  right: 0;
+  width: 100px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+  text-align: right;
+}
+
+.slick-prev {
+  left: 0;
+  z-index: 5;
+}
+
+.slick-next:hover,
+.slick-prev:hover {
+  background-color: rgba(0, 0, 0, 0.034);
+}
+
+.icon {
+  font-size: 50px;
+  color: rgb(199, 196, 196);
+}
+
+.slick-prev::before,
+.slick-next::before {
+  display: none;
+}
+
+/* dots */
+.slick-dots {
+  display: flex !important;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 20%;
+  bottom: 50px;
+  right: 0;
+}
+.slick-dots li {
+  margin-left: 2px;
+}
+
+.slick-dots li button::before {
+  color: rgb(255, 255, 255) !important;
+  font-size: 10px;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #fff !important;
+  opacity: 1 !important;
+  transform: scale(1.19);
+  margin-top: 1px;
+}
+
+/* slide */
+
+.main-slide {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  transition: all 250ms ease-in-out;
+  background-color: #000000;
+}
+
+@media (max-width: 800px) {
+  .main-slide {
+    height: 300px;
+  }
+
+  .slick-dots {
+    justify-content: center;
+    width: 100%;
+    margin-right: 0px;
+    bottom: 10px;
+    right: 0;
+  }
+  .slick-dots li button::before {
+    color: rgb(255, 255, 255) !important;
+    font-size: 5px;
+  }
+  .slick-dots li {
+    margin-left: -10px;
+  }
+
+  .search-div {
+    display: none;
+  }
+  .search-input {
+    display: none;
+  }
+
+  .play-icon {
+    display: none;
+  }
+
+  .icon {
+    font-size: 20px;
+  }
+  .slick-next,
+  .slick-prev {
+    width: 50px;
+  }
+
+  .searh-box {
+    display: none !important;
+    background-color: gold !important;
+  }
+  .search-icon {
+    display: none;
+  }
+}
+
+.slider-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  object-fit: cover;
+  opacity: 0.5;
+}
+
+.slider-title {
+  position: absolute;
+  color: #fff;
+  font-size: 20px;
+  left: 20%;
+  bottom: 60px;
+}
+
+.play-icon-div {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+.play-icon {
+  font-size: 100px;
+  color: rgb(212, 212, 212);
+  cursor: pointer;
+}
+
+.play-icon:hover {
+  font-size: 100px;
+  color: #1683c6;
+  cursor: pointer;
+}
+
+.overflow-color {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.308) 0%,
+    rgba(0, 0, 0, 0.124) 51%,
+    rgba(0, 0, 0, 0.054) 53%,
+    rgba(0, 0, 0, 0.192) 100%
+  );
+}
+
+/* search */
+
+.search-div {
+  width: 100%;
+  height: 50px;
+  margin-top: -50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  background-color: rgba(0, 255, 255, 0);
+}
+
+.search-input {
+  width: 60%;
+  height: 25px;
+  text-align: center;
+  background-color: rgba(236, 234, 234, 0.856);
+  border-radius: 3px;
+  border: none;
+  box-shadow: none;
+  font-size: 16px;
+}
+
+.search-input:focus {
+  outline: none;
+}
+
+.searh-box {
+  display: grid;
+  grid-template-columns: repeat(5, 19%);
+  grid-template-rows: repeat(2, 49%);
+
+  column-gap: 10px;
+  row-gap: 10px;
+  padding: 15px;
+  position: absolute;
+  top: 40px;
+  width: 60%;
+  height: 300px;
+  background-color: #ffffff;
+}
+
+.item-div {
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.overflow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.2049194677871149) 24%,
+    rgba(0, 0, 0, 0.4990371148459384) 100%
+  );
+}
+
+.searchBoxImg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.searchBoxTitle {
+  position: absolute;
+  bottom: 5px;
+  left: 3px;
+
+  font-size: 12px;
+  color: whitesmoke;
+}
+
+.black-overflow {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 200vh;
+  background-color: rgba(0, 0, 0, 0.548);
+  z-index: 1;
+}
+
+.search-icon {
+  color: white;
+  margin-left: 10px;
+}

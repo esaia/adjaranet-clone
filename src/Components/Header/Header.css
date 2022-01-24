@@ -1,0 +1,130 @@
+body {
+  height: 8000px;
+}
+
+.header {
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+  background-color: rgba(255, 5, 5, 0);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 60px;
+  transition: 0.5s ease-in-out;
+}
+
+.header.active {
+  background-color: rgb(72, 183, 190);
+}
+
+.logo {
+  width: 200px;
+}
+
+.menu {
+  display: flex;
+}
+
+.menu-item {
+  position: relative;
+  padding-left: 15px;
+  cursor: pointer;
+}
+
+.navlink {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  padding: 5px;
+}
+.navlink:hover {
+  color: #1683c6;
+}
+
+.navlink p {
+  margin-top: 5px;
+  font-size: 11px;
+}
+
+.active {
+  color: #1683c6;
+}
+
+.right {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.continue-with-fb {
+  width: 150px;
+  margin-left: 20px;
+  object-fit: cover;
+}
+
+.submenu {
+  position: absolute;
+  top: 55px;
+  left: -130px;
+  width: 350px;
+  height: 70px;
+  border-radius: 2px;
+  background-color: rgb(255, 255, 255);
+  z-index: 5;
+  cursor: default;
+}
+.submenu-series {
+  position: absolute;
+  top: 55px;
+  left: -130px;
+  width: 350px;
+  height: 45px;
+  border-radius: 2px;
+  background-color: rgb(255, 255, 255);
+  z-index: 5;
+}
+
+.speacer {
+  position: relative;
+  background-color: rgba(105, 44, 44, 0);
+  width: 100%;
+  height: 20px;
+  margin-top: -20px;
+  display: flex;
+}
+.triangle {
+  position: absolute;
+  margin-left: 175px;
+  margin-top: -6px;
+  border-bottom: 5px solid rgb(255, 255, 255);
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  bottom: 0;
+}
+
+.submenu-movie {
+  margin: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.submenu-movie a {
+  font-size: 12px;
+  padding-right: 2px;
+  color: rgb(61, 61, 61);
+  margin: 6px;
+  cursor: pointer;
+  padding-bottom: 5px;
+}
+.sepirator {
+  color: #b1b1b1;
+}
+
+.submenu-movie a:hover {
+  color: #1683c6;
+  border-bottom: 1px solid #1683c6;
+  margin-bottom: 3px;
+}

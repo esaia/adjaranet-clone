@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "title": "Tv",
+    "path": "./page1",
+    "icon": "fas fa-desktop"
+  },
+  {
+    "id": 2,
+    "title": "ფილმები",
+    "path": "./page2",
+    "icon": "far fa-film",
+    "submenu": {
+      "title1": "ქართულად გახმოვანებული",
+      "title2": "ანიმაცია",
+      "title3": "დოკუმენტური",
+      "title4": "თრეილერები",
+      "title5": "კოლექციები"
+    }
+  },
+  {
+    "id": 3,
+    "title": "სერიალები",
+    "path": "./page2",
+
+    "icon": "fal fa-play-circle",
+    "submenu": {
+      "title6": "ქართულად გახმოვანებული",
+      "title7": "თურქული"
+    }
+  },
+  {
+    "id": 4,
+    "title": "cinema",
+    "path": "./page2",
+
+    "icon": "far fa-camera-polaroid"
+  },
+  {
+    "id": 5,
+    "title": "საბავშვო",
+    "path": "./page2",
+
+    "icon": "far fa-laugh"
+  }
+]
