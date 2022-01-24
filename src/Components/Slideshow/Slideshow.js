@@ -102,7 +102,7 @@ function Slideshow(props) {
       <div className='search-div'>
         <input
           type='text'
-          placeholder='ძიება....'
+          placeholder='ძიება...'
           value={inputvalue}
           onChange={(e) => setInputValue(e.target.value)}
           onFocus={() => setInputisfocused(true)}

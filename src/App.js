@@ -14,6 +14,7 @@ function App() {
 
       <Route exact path={"/"}>
         <Homepage />
+        {/* here */}
       </Route>
 
       <Route path={"/page1"}>
