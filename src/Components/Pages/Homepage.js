@@ -5,6 +5,7 @@ function Homepage() {
   return (
     <div>
       <Slideshow />
+      {/* slider */}
     </div>
   );
 }
