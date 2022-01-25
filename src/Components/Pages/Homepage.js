@@ -5,6 +5,7 @@ function Homepage() {
   return (
     <div>
       <Slideshow />
+      <h2>testing</h2>
     </div>
   );
 }
