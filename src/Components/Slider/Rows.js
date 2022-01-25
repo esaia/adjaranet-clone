@@ -19,14 +19,17 @@ function Rows({ title, fetchURL }) {
   }, [fetchURL]);
 
   const handleclick = (direction) => {
-    if (direction === "left") {
-      settranslateX(translateX + 175);
+    if (direction === "left" && translateX != 0) {
+      settranslateX(translateX + 875);
+      const x = translateX + 875;
+      listref.current.style.transform = `translateX(${x}px)`;
     }
-    if (direction === "right") {
-      settranslateX(translateX - 175);
+    if (direction === "right" && translateX != -2625) {
+      settranslateX(translateX - 875);
+      const x = translateX - 875;
+      listref.current.style.transform = `translateX(${x}px)`;
+      console.log(x);
     }
-    listref.current.style.transform = `translateX(${translateX}px)`;
-    console.log(translateX);
   };
   return (
     <div className='main-row'>
@@ -37,10 +40,22 @@ function Rows({ title, fetchURL }) {
             <FaAngleLeft
               className='rowIcon'
               onClick={() => handleclick("left")}
+              style={{
+                color: `${
+                  translateX === 0 ? "rgb(223, 223, 223)" : "rgb(148, 148, 148)"
+                }`,
+              }}
             />
             <FaAngleRight
               className='rowIcon'
               onClick={() => handleclick("right")}
+              style={{
+                color: `${
+                  translateX === -2625
+                    ? "rgb(223, 223, 223)"
+                    : "rgb(148, 148, 148)"
+                }`,
+              }}
             />
           </div>
         </div>

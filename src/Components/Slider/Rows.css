@@ -1,13 +1,11 @@
 .main-row {
   width: 100%;
-  background-color: brown;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .slider-row {
   width: 70%;
-  background-color: burlywood;
   overflow: hidden;
   /* top right bottom left */
   margin: 3% 5% 0px 5%;
@@ -27,18 +25,17 @@
 }
 .rowIcon {
   font-size: 20px;
-  color: black;
+  color: rgb(148, 148, 148);
   cursor: pointer;
 }
 .rowIcon:hover {
-  color: rgb(57, 143, 143);
+  color: #1683c6 !important;
 }
 
 .bottop-section {
   margin-top: 20px;
   display: flex;
-  flex-wrap: nowrap;
-  background-color: rgb(130, 175, 116);
+  transition: all 1s ease;
 }
 
 .row-img {
