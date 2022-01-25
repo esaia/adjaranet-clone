@@ -1,0 +1,49 @@
+.main-row {
+  width: 100%;
+  background-color: brown;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slider-row {
+  width: 70%;
+  background-color: burlywood;
+  overflow: hidden;
+  /* top right bottom left */
+  margin: 3% 5% 0px 5%;
+}
+
+.top-section {
+  display: flex;
+  justify-content: space-between;
+}
+.title {
+  font-size: 20px;
+}
+.icons-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.rowIcon {
+  font-size: 20px;
+  color: black;
+  cursor: pointer;
+}
+.rowIcon:hover {
+  color: rgb(57, 143, 143);
+}
+
+.bottop-section {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: rgb(130, 175, 116);
+}
+
+.row-img {
+  margin-left: 10px;
+  width: 165px;
+  height: 230px;
+  object-fit: cover;
+}

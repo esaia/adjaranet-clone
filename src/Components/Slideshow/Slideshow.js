@@ -7,9 +7,9 @@ import {
   FaSearch,
 } from "react-icons/fa";
 import Slider from "react-slick";
+import SearchBox from "./SearchBox";
 import axios from "../../axios";
 import requests from "../../Requests";
-import SearchBox from "./SearchBox";
 
 // arrows
 const NextArrow = (props) => {
@@ -42,7 +42,6 @@ function Slideshow(props) {
       setMovie(request.data.results);
       return request;
     }
-
     fetchData();
   }, []);
 
@@ -61,15 +60,13 @@ function Slideshow(props) {
       return movie.title && movie.title.toLowerCase().includes(inputvalue);
     });
     setFilteredArray(new_movies);
-
     setInputisfocused(true);
   };
-
-  const newdata = movies.slice(0, 5);
+  const newdata = movies.slice(0, 8);
   return (
     <div>
       <div
-        className={`${inputisfocused && "black-overflow active"}`}
+        className={`${inputisfocused && "black-overflow"}`}
         onClick={() => setInputisfocused(false)}
       ></div>
 
@@ -106,7 +103,6 @@ function Slideshow(props) {
           value={inputvalue}
           onChange={(e) => setInputValue(e.target.value)}
           onFocus={() => setInputisfocused(true)}
-          // onBlur={() => setInputisfocused(false)}
           onKeyUp={search_function}
           className='search-input'
         />
