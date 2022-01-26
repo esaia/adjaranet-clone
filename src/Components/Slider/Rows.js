@@ -62,12 +62,14 @@ function Rows({ title, fetchURL }) {
         <div className='bottop-section' ref={listref}>
           {movies.map((movie, index) => {
             return (
-              <img
-                src={`https://image.tmdb.org/t/p/original/${movie?.backdrop_path}`}
-                alt=''
-                className='row-img '
-                key={index}
-              />
+              <div className='row-item'>
+                <img
+                  src={`https://image.tmdb.org/t/p/original/${movie?.backdrop_path}`}
+                  alt=''
+                  className='row-img'
+                  key={index}
+                />
+              </div>
             );
           })}
         </div>
