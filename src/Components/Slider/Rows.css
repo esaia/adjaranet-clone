@@ -65,5 +65,6 @@
   }
   .bottop-section {
     overflow: auto scroll;
+    overflow-y: hidden;
   }
 }
