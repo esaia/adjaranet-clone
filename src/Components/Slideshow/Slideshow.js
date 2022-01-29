@@ -64,7 +64,7 @@ function Slideshow(props) {
   };
   const newdata = movies.slice(0, 8);
   return (
-    <div>
+    <div className='main-wrap'>
       <div
         className={`${inputisfocused && "black-overflow"}`}
         onClick={() => setInputisfocused(false)}
@@ -90,7 +90,7 @@ function Slideshow(props) {
                 <div className='play-icon-div'>
                   <FaRegPlayCircle className='play-icon' />
                 </div>
-                <h2 className='slider-title'>{item.title}</h2>
+                <h2 className='slider-title'>{item.title || item.name}</h2>
               </div>
             </div>
           );

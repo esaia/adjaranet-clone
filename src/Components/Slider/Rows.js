@@ -3,11 +3,13 @@ import axios from "../../axios";
 import requests from "../../Requests";
 import { FaAngleRight, FaAngleLeft } from "react-icons/fa";
 import "./Rows.css";
+import MovideDesc from "./MovideDesc";
 
 function Rows({ title, fetchURL }) {
   const [movies, setMovies] = useState([]);
   const listref = useRef();
   const [translateX, settranslateX] = useState(0);
+  const [ishovering, setIshovering] = useState(-1);
 
   useEffect(() => {
     async function fetchData() {
@@ -28,9 +30,9 @@ function Rows({ title, fetchURL }) {
       settranslateX(translateX - 875);
       const x = translateX - 875;
       listref.current.style.transform = `translateX(${x}px)`;
-      console.log(x);
     }
   };
+
   return (
     <div className='main-row'>
       <div className='slider-row'>
@@ -62,13 +64,19 @@ function Rows({ title, fetchURL }) {
         <div className='bottop-section' ref={listref}>
           {movies.map((movie, index) => {
             return (
-              <div className='row-item'>
+              <div
+                className='row-item'
+                key={index}
+                onMouseEnter={() => setIshovering(index)}
+                onMouseLeave={() => setIshovering(-1)}
+              >
                 <img
                   src={`https://image.tmdb.org/t/p/original/${movie?.backdrop_path}`}
                   alt=''
                   className='row-img'
-                  key={index}
                 />
+
+                {ishovering === index && <MovideDesc movie={movie} />}
               </div>
             );
           })}

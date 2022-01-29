@@ -65,7 +65,11 @@
   background-color: #000000;
 }
 
+/* Break */
 @media (max-width: 800px) {
+  .main-wrap {
+    margin-top: 50px;
+  }
   .main-slide {
     height: 200px;
   }

@@ -32,6 +32,7 @@
 .rowIcon:hover {
   color: #1683c6 !important;
 }
+/* bottom */
 
 .bottop-section {
   margin-top: 20px;
@@ -39,23 +40,63 @@
   display: flex;
 }
 .row-item {
-  width: 300px;
-}
-.row-img {
+  position: relative;
   width: 165px;
   height: 200px;
   max-height: 200px;
   margin-left: 10px;
+  cursor: pointer;
+}
+
+.row-img {
+  width: 165px;
+  height: 100%;
   object-fit: cover;
   cursor: pointer;
-  border-radius: 2px;
+  border-radius: 4px;
 }
 
-.row-img:hover {
-  transition: all 0-5s ease;
-  transform: scale(1.08);
+/* Movie Description */
+
+.main-desc {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgb(202, 202, 202);
+  background-color: white;
+  border-radius: 4px;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.14);
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.14);
 }
 
+.main-desc h1 {
+  font-weight: bold;
+  cursor: initial;
+  font-size: 12px;
+  padding: 10px;
+  color: rgb(17, 17, 17);
+}
+
+.main-desc p {
+  font-size: 10px;
+  padding: 10px;
+  cursor: initial;
+  color: rgb(34, 33, 33);
+}
+
+.desc-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  background-color: #009155;
+}
+.desc-info p {
+  color: white;
+}
+
+/* Break */
 @media (max-width: 800px) {
   .rowIcon {
     display: none;
