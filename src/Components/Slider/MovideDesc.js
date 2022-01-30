@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Rows.css";
 
 function MovideDesc({ movie }) {
@@ -9,6 +10,10 @@ function MovideDesc({ movie }) {
     <div className='main-desc'>
       <h1>{movie.title || movie.name}</h1>
       <p>{truncate(movie.overview, 100)}</p>
+      <Link to={"/movie/" + movie.id}>
+        <button>View {movie.id}</button>
+      </Link>
+
       <div className='desc-info'>
         <p>{movie.release_date}</p>
         <p>{movie.vote_average}</p>

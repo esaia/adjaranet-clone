@@ -71,6 +71,12 @@
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.14);
 }
 
+.main-desc button {
+  width: 100%;
+  height: 20px;
+  cursor: pointer;
+}
+
 .main-desc h1 {
   font-weight: bold;
   cursor: initial;

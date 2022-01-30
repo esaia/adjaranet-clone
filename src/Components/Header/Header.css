@@ -4,7 +4,7 @@ body {
 
 .header {
   position: fixed;
-  z-index: 1;
+  z-index: 30;
   width: 100%;
   background-color: rgba(255, 5, 5, 0);
   display: flex;
@@ -139,9 +139,10 @@ body {
   align-items: center;
   justify-content: space-between;
   position: fixed;
+  height: 50px;
   top: 0;
   width: 100%;
-  padding: 3px;
+  padding: 2px;
   z-index: 11;
   background-color: rgb(255, 255, 255);
 }

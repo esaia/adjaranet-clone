@@ -1,15 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "./Slideshow.css";
-import {
-  FaAngleLeft,
-  FaAngleRight,
-  FaRegPlayCircle,
-  FaSearch,
-} from "react-icons/fa";
+import { FaAngleLeft, FaAngleRight, FaRegPlayCircle } from "react-icons/fa";
 import Slider from "react-slick";
-import SearchBox from "./SearchBox";
 import axios from "../../axios";
 import requests from "../../Requests";
+import Search from "./Search";
 
 // arrows
 const NextArrow = (props) => {
@@ -32,9 +27,6 @@ const PrevArrow = (props) => {
 
 function Slideshow(props) {
   const [movies, setMovie] = useState([]);
-  const [inputvalue, setInputValue] = useState("");
-  const [inputisfocused, setInputisfocused] = useState(false);
-  const [filteredArray, setFilteredArray] = useState([]);
 
   useEffect(() => {
     async function fetchData() {
@@ -54,22 +46,9 @@ function Slideshow(props) {
     slidesToScroll: 1,
   };
 
-  // id = 524434
-  const search_function = () => {
-    const new_movies = movies.filter((movie) => {
-      return movie.title && movie.title.toLowerCase().includes(inputvalue);
-    });
-    setFilteredArray(new_movies);
-    setInputisfocused(true);
-  };
   const newdata = movies.slice(0, 8);
   return (
     <div className='main-wrap'>
-      <div
-        className={`${inputisfocused && "black-overflow"}`}
-        onClick={() => setInputisfocused(false)}
-      ></div>
-
       <Slider
         {...settings}
         className='slider'
@@ -96,20 +75,8 @@ function Slideshow(props) {
           );
         })}
       </Slider>
-      <div className='search-div'>
-        <input
-          type='text'
-          placeholder='ძიება...'
-          value={inputvalue}
-          onChange={(e) => setInputValue(e.target.value)}
-          onFocus={() => setInputisfocused(true)}
-          onKeyUp={search_function}
-          className='search-input'
-        />
-
-        <FaSearch className='search-icon' />
-
-        {inputisfocused && <SearchBox filteredArray={filteredArray} />}
+      <div className='axpt4g'>
+        <Search />
       </div>
     </div>
   );

@@ -21,7 +21,7 @@ function Header() {
   return (
     <div className={navbar ? "header active" : "header"}>
       {/* left */}
-      <Link to='./'>
+      <Link to='/'>
         <img
           src='https://api.adjaranet.com/img/adjaranet-logo.svg'
           alt='logo'

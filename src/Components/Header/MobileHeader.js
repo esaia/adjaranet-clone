@@ -19,7 +19,7 @@ function MobileHeader() {
   return (
     <div className='mobile-header'>
       <AiOutlineMenu className='icon-mob' onClick={() => handleClick("show")} />
-      <Link to='./'>
+      <Link to='/'>
         <img
           src='https://api.adjaranet.com/img/adjaranet-logo.svg'
           alt='logo'
