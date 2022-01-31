@@ -47,11 +47,11 @@ function Movie(props) {
         </div>
 
         <div className='video-div'>
-          {/* <img
-              src={`https://image.tmdb.org/t/p/original/${movies?.backdrop_path}`}
-              alt='cover-image'
-              className='cover-image'
-            /> */}
+          <img
+            src={`https://image.tmdb.org/t/p/original/${movies?.backdrop_path}`}
+            alt='cover-image'
+            className='cover-image'
+          />
 
           <div className='yt-video'>
             {/* <YouTube
@@ -61,22 +61,22 @@ function Movie(props) {
             }
           /> */}
           </div>
-          {/* <div className='bottom-v1'>
+          <div className='bottom-v1'>
             <h2>{movies?.title}</h2>
             <div className='imdb-container'>
               <h3 className='imdb-box'>IMDB</h3>
               <p>{movies.vote_average}</p>
               <h3 className='triler-box'>Trailer</h3>
             </div>
-          </div> */}
+          </div>
         </div>
         {/* details */}
-        {/* <div className='details-section'>
+        <div className='details-section'>
           <div className='left-det'>
             <img
-                src={`https://image.tmdb.org/t/p/original/${movies?.poster_path}`}
-                alt='poster-image'
-              />
+              src={`https://image.tmdb.org/t/p/original/${movies?.poster_path}`}
+              alt='poster-image'
+            />
 
             <button>! Report a problem</button>
           </div>
@@ -109,12 +109,12 @@ function Movie(props) {
               <p className='description'>{movies.overview}</p>
             </div>
           </div>
-        </div> */}
+        </div>
 
-        {/* <Rows
+        <Rows
           title='Similar'
           fetchURL={`https://api.themoviedb.org/3/movie/${id}/similar?api_key=26cedb780e2fe93c9340b36dac2c268c&language=en-US&page=1`}
-        /> */}
+        />
       </div>
     </div>
   );
