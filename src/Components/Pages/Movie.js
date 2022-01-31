@@ -50,11 +50,11 @@ function Movie(props) {
           </div>
 
           <div className='video-div'>
-            <img
+            {/* <img
               src={`https://image.tmdb.org/t/p/original/${movies?.backdrop_path}`}
               alt='cover-image'
               className='cover-image'
-            />
+            /> */}
 
             <div className='yt-video'>
               {/* <YouTube
@@ -76,10 +76,10 @@ function Movie(props) {
           {/* details */}
           <div className='details-section'>
             <div className='left-det'>
-              <img
+              {/* <img
                 src={`https://image.tmdb.org/t/p/original/${movies?.poster_path}`}
                 alt='poster-image'
-              />
+              /> */}
 
               <button>! Report a problem</button>
             </div>
