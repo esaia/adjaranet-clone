@@ -10,6 +10,7 @@ import requests from "../../Requests";
 function Movie(props) {
   const [movies, setMovie] = useState([]);
   const [video, setVideo] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   const id = parseInt(props.match.params.id);
   useEffect(() => {
@@ -28,6 +29,7 @@ function Movie(props) {
       const request = await axios.get(
         `https://api.themoviedb.org/3/movie/${id}?api_key=26cedb780e2fe93c9340b36dac2c268c&language=en-US`
       );
+      setLoading(false);
       setMovie(request.data);
       return request;
     }
@@ -37,8 +39,6 @@ function Movie(props) {
     return <Redirect to={{ pathname: "/404" }} />;
   }
 
-  console.log(movies.production_countries);
-  console.log(movies);
   return (
     <div>
       <div className='black-spacer'>
@@ -46,19 +46,27 @@ function Movie(props) {
       </div>
 
       <div className='video-div'>
-        <img
-          src={`https://image.tmdb.org/t/p/original/${movies?.backdrop_path}`}
-          alt='cover-image'
-          className='cover-image'
-        />
-
+        {loading ? (
+          <img
+            src={
+              "https://skillz4kidzmartialarts.com/wp-content/uploads/2017/04/default-image.jpg"
+            }
+            alt='poster-image'
+          />
+        ) : (
+          <img
+            src={`https://image.tmdb.org/t/p/original/${movies?.backdrop_path}`}
+            alt='cover-image'
+            className='cover-image'
+          />
+        )}
         <div className='yt-video'>
-          <YouTube
+          {/* <YouTube
             videoId={
               (video.results && video.results[video.results.length - 2]?.key) ||
               (video.results && video.results[video.results.length - 1]?.key)
             }
-          />
+          /> */}
         </div>
         <div className='bottom-v1'>
           <h2>{movies?.title}</h2>
@@ -72,10 +80,20 @@ function Movie(props) {
       {/* details */}
       <div className='details-section'>
         <div className='left-det'>
-          <img
-            src={`https://image.tmdb.org/t/p/original/${movies?.poster_path}`}
-            alt='poster-image'
-          />
+          {loading ? (
+            <img
+              src={
+                "https://skillz4kidzmartialarts.com/wp-content/uploads/2017/04/default-image.jpg"
+              }
+              alt='poster-image'
+            />
+          ) : (
+            <img
+              src={`https://image.tmdb.org/t/p/original/${movies?.poster_path}`}
+              alt='poster-image'
+            />
+          )}
+
           <button>! Report a problem</button>
         </div>
         <div className='right-det'>
