@@ -22,7 +22,7 @@ function App() {
     setWindowWidth(window.innerWidth);
   };
   return (
-    <Router>
+    <Router forceRefresh>
       {windowWidth > 800 ? <Header /> : <MobileHeader />}
       <Route exact path={"/"}>
         <Homepage />

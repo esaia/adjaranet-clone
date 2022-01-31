@@ -1,0 +1,26 @@
+export const Defaultimages = [
+  {
+    backdrop_path:
+      "https://www.unityhighschool.org/wp-content/uploads/2014/08/default-placeholder.png",
+  },
+  {
+    backdrop_path:
+      "https://www.unityhighschool.org/wp-content/uploads/2014/08/default-placeholder.png",
+  },
+  {
+    backdrop_path:
+      "https://www.unityhighschool.org/wp-content/uploads/2014/08/default-placeholder.png",
+  },
+  {
+    backdrop_path:
+      "https://www.unityhighschool.org/wp-content/uploads/2014/08/default-placeholder.png",
+  },
+  {
+    backdrop_path:
+      "https://www.unityhighschool.org/wp-content/uploads/2014/08/default-placeholder.png",
+  },
+  {
+    backdrop_path:
+      "https://www.unityhighschool.org/wp-content/uploads/2014/08/default-placeholder.png",
+  },
+];

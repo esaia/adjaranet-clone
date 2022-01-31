@@ -4,19 +4,20 @@ import requests from "../../Requests";
 import { FaAngleRight, FaAngleLeft } from "react-icons/fa";
 import "./Rows.css";
 import MovideDesc from "./MovideDesc";
+import { Defaultimages } from "./Defaultimages";
 
 function Rows({ title, fetchURL }) {
   const [movies, setMovies] = useState([]);
   const listref = useRef();
   const [translateX, settranslateX] = useState(0);
   const [ishovering, setIshovering] = useState(-1);
-
   useEffect(() => {
     async function fetchData() {
       const request = await axios.get(fetchURL);
       setMovies(request.data.results);
       return requests;
     }
+
     fetchData();
   }, [fetchURL]);
 

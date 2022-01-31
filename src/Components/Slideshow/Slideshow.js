@@ -5,6 +5,7 @@ import Slider from "react-slick";
 import axios from "../../axios";
 import requests from "../../Requests";
 import Search from "./Search";
+import { Link } from "react-router-dom";
 
 // arrows
 const NextArrow = (props) => {
@@ -65,10 +66,11 @@ function Slideshow(props) {
                   className='slider-image'
                 />
                 <div className='overflow-color'></div>
-
-                <div className='play-icon-div'>
-                  <FaRegPlayCircle className='play-icon' />
-                </div>
+                <Link to={"/movie/" + item.id}>
+                  <div className='play-icon-div'>
+                    <FaRegPlayCircle className='play-icon' />
+                  </div>
+                </Link>
                 <h2 className='slider-title'>{item.title || item.name}</h2>
               </div>
             </div>

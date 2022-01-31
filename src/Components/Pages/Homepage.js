@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import Rows from "../Slider/Rows";
 import Slideshow from "../Slideshow/Slideshow";
 import requests from "../../Requests";
-import Search from "../Slideshow/Search";
 function Homepage() {
   return (
     <div>
