@@ -5,12 +5,14 @@ import { FaAngleRight, FaAngleLeft } from "react-icons/fa";
 import "./Rows.css";
 import MovideDesc from "./MovideDesc";
 import { Defaultimages } from "./Defaultimages";
+import { DefaultData } from "../../DefaultData";
 
 function Rows({ title, fetchURL }) {
-  const [movies, setMovies] = useState([]);
+  const [movies, setMovies] = useState(DefaultData);
   const listref = useRef();
   const [translateX, settranslateX] = useState(0);
   const [ishovering, setIshovering] = useState(-1);
+
   useEffect(() => {
     async function fetchData() {
       const request = await axios.get(fetchURL);
@@ -72,11 +74,14 @@ function Rows({ title, fetchURL }) {
                 onMouseLeave={() => setIshovering(-1)}
               >
                 <img
-                  src={`https://image.tmdb.org/t/p/original/${movie?.backdrop_path}`}
+                  src={
+                    movie.img ||
+                    `https://image.tmdb.org/t/p/original/${movie?.backdrop_path}`
+                  }
                   alt=''
                   className='row-img'
                 />
-
+                <h1>{movie.title}</h1>
                 {ishovering === index && <MovideDesc movie={movie} />}
               </div>
             );

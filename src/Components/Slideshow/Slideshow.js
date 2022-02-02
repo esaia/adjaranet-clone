@@ -6,6 +6,7 @@ import axios from "../../axios";
 import requests from "../../Requests";
 import Search from "./Search";
 import { Link } from "react-router-dom";
+import { DefaultData } from "../../DefaultData";
 
 // arrows
 const NextArrow = (props) => {
@@ -26,13 +27,13 @@ const PrevArrow = (props) => {
   );
 };
 
-function Slideshow(props) {
-  const [movies, setMovie] = useState([]);
-
+function Slideshow() {
+  const [movies, setMovie] = useState(DefaultData);
   useEffect(() => {
     async function fetchData() {
       const request = await axios.get(requests.fethTrending);
       setMovie(request.data.results);
+
       return request;
     }
     fetchData();

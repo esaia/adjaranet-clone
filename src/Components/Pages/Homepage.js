@@ -8,7 +8,7 @@ function Homepage() {
       <Slideshow />
       <Rows title='NETFLIX ORIGINALS' fetchURL={requests.fethTrending} />
       <Rows title='Top rated' fetchURL={requests.upcaming} />
-      <Rows title='Comedy' fetchURL={requests.popular} />
+      <Rows title='Comedy' fetchURL={requests.popular} />)
     </div>
   );
 }
