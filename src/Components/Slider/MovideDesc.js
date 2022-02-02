@@ -14,6 +14,10 @@ function MovideDesc({ movie }) {
         <button>View {movie.id}</button>
       </Link>
 
+      <Link to={"/test/" + movie.id}>
+        <button>test {movie.id}</button>
+      </Link>
+
       <div className='desc-info'>
         <p>{movie.release_date}</p>
         <p>{movie.vote_average}</p>
