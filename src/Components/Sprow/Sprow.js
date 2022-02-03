@@ -63,7 +63,7 @@ function Sprow({ title, fetchURL }) {
         </div>
         <div className='sprow-col' ref={listref}>
           <div className='boxb'>
-            <Link to={"/movie/" + movies.id}>
+            <Link to={"/movie/" + movies[0].id}>
               <img
                 src={
                   movies[0].img ||
