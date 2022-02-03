@@ -81,6 +81,7 @@
   .sprow-col {
     overflow-x: scroll;
     overflow-y: hidden;
+    height: 150px;
   }
   .sprow-title {
     font-size: 10px;
