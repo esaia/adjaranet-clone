@@ -23,7 +23,7 @@ function App() {
   };
   return (
     <Router forceRefresh>
-      {/* {windowWidth > 800 ? <Header /> : <MobileHeader />} */}
+      {windowWidth > 800 ? <Header /> : <MobileHeader />}
       <Route exact path={"/"}>
         <Homepage />
       </Route>

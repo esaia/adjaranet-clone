@@ -4,6 +4,7 @@ import axios from "../../axios";
 import requests from "../../Requests";
 import { DefaultData } from "../../DefaultData";
 import { FaAngleRight, FaAngleLeft } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function Sprow({ title, fetchURL }) {
   const [movies, setMovies] = useState(DefaultData);
@@ -62,28 +63,32 @@ function Sprow({ title, fetchURL }) {
         </div>
         <div className='sprow-col' ref={listref}>
           <div className='boxb'>
-            <img
-              src={
-                movies[0].img ||
-                `https://image.tmdb.org/t/p/original/${movies[0]?.backdrop_path}`
-              }
-              alt=''
-              className='sprow-img'
-            />
-            <h1 className='sprow-title'>{movies[0].title}</h1>
+            <Link to={"/movie/" + movies.id}>
+              <img
+                src={
+                  movies[0].img ||
+                  `https://image.tmdb.org/t/p/original/${movies[0]?.backdrop_path}`
+                }
+                alt=''
+                className='sprow-img'
+              />
+              <h1 className='sprow-title'>{movies[0].title}</h1>
+            </Link>
           </div>
           {small_movie_array.map((movie, index) => {
             return (
               <div className='box1' key={index}>
-                <img
-                  src={
-                    movie.img ||
-                    `https://image.tmdb.org/t/p/original/${movie?.backdrop_path}`
-                  }
-                  alt=''
-                  className='sprow-img'
-                />
-                <h1 className='sprow-title'>{movie.title}</h1>
+                <Link to={"/movie/" + movie.id}>
+                  <img
+                    src={
+                      movie.img ||
+                      `https://image.tmdb.org/t/p/original/${movie?.backdrop_path}`
+                    }
+                    alt=''
+                    className='sprow-img'
+                  />
+                  <h1 className='sprow-title'>{movie.title}</h1>
+                </Link>
               </div>
             );
           })}

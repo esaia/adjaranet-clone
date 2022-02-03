@@ -10,7 +10,7 @@ function Homepage() {
       <Rows title='NETFLIX ORIGINALS' fetchURL={requests.fethTrending} />
       <Rows title='UPCOMING' fetchURL={requests.upcaming} />
       <Rows title='POPULAR' fetchURL={requests.popular} />
-      <Sprow title='test' fetchURL={requests.popular} />
+      <Sprow title='NEW MOVIES' fetchURL={requests.popular} />
     </div>
   );
 }
