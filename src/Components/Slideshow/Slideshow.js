@@ -7,13 +7,13 @@ import requests from "../../Requests";
 import Search from "./Search";
 import { Link } from "react-router-dom";
 import { DefaultData } from "../../DefaultData";
-
+import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 // arrows
 const NextArrow = (props) => {
   const { className, onClick } = props;
   return (
     <div className={className} onClick={onClick}>
-      <FaAngleRight className='icon' />
+      <IoIosArrowForward className='icon' />
     </div>
   );
 };
@@ -22,7 +22,7 @@ const PrevArrow = (props) => {
   const { className, onClick } = props;
   return (
     <div className={className} onClick={onClick}>
-      <FaAngleLeft className='icon' />
+      <IoIosArrowBack className='icon' />
     </div>
   );
 };

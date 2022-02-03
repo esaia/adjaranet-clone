@@ -6,7 +6,8 @@ import "./Rows.css";
 import MovideDesc from "./MovideDesc";
 import { Defaultimages } from "./Defaultimages";
 import { DefaultData } from "../../DefaultData";
-
+import { FaRegPlayCircle } from "react-icons/fa";
+import { Link } from "react-router-dom";
 function Rows({ title, fetchURL }) {
   const [movies, setMovies] = useState(DefaultData);
   const listref = useRef();
@@ -47,7 +48,7 @@ function Rows({ title, fetchURL }) {
               onClick={() => handleclick("left")}
               style={{
                 color: `${
-                  translateX === 0 ? "rgb(223, 223, 223)" : "rgb(148, 148, 148)"
+                  translateX === 0 ? "rgb(139, 139, 139)" : "rgb(80, 80, 78)"
                 }`,
               }}
             />
@@ -57,8 +58,8 @@ function Rows({ title, fetchURL }) {
               style={{
                 color: `${
                   translateX === -2625
-                    ? "rgb(223, 223, 223)"
-                    : "rgb(148, 148, 148)"
+                    ? "rgb(139, 139, 139)"
+                    : "rgb(80, 80, 78)"
                 }`,
               }}
             />
@@ -81,8 +82,18 @@ function Rows({ title, fetchURL }) {
                   alt=''
                   className='row-img'
                 />
-                <h1>{movie.title}</h1>
-                {ishovering === index && <MovideDesc movie={movie} />}
+                {ishovering === index && (
+                  <>
+                    <MovideDesc movie={movie} index={index} />
+                    <div className='hover-overlay'>
+                      <Link to={"/movie/" + movie.id}>
+                        <FaRegPlayCircle className='ic' />
+                      </Link>
+                    </div>
+                    <div className='hover-spacing'></div>
+                    <div className='hover-spacing left-spacing'></div>
+                  </>
+                )}
               </div>
             );
           })}

@@ -7,7 +7,6 @@ import MobileHeader from "./Components/Header/MobileHeader";
 import Homepage from "./Components/Pages/Homepage";
 import Movie from "./Components/Pages/Movie";
 import PageNotFound from "./Components/Pages/PageNotFound";
-import Test from "./Components/Pages/Test";
 
 function App() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -24,17 +23,13 @@ function App() {
   };
   return (
     <Router forceRefresh>
-      {windowWidth > 800 ? <Header /> : <MobileHeader />}
+      {/* {windowWidth > 800 ? <Header /> : <MobileHeader />} */}
       <Route exact path={"/"}>
         <Homepage />
       </Route>
 
       <Route path={"/movie/:id"}>
         <Movie />
-      </Route>
-
-      <Route path={"/test/:id"}>
-        <Test />
       </Route>
 
       <Route path={"/404"}>

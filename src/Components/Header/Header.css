@@ -15,8 +15,8 @@ body {
   transition: 0.5s ease;
 }
 
-.header.active {
-  background-color: rgb(2, 2, 2);
+.active {
+  background-color: rgb(255, 255, 255);
   z-index: 30;
 }
 
@@ -42,6 +42,10 @@ body {
   text-decoration: none;
   color: rgb(255, 255, 255);
   padding: 5px;
+}
+
+.scrolled {
+  color: rgb(70, 70, 70);
 }
 .navlink:hover {
   color: #1683c6;

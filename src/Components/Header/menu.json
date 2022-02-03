@@ -2,13 +2,13 @@
   {
     "id": 1,
     "title": "Tv",
-    "path": "./page1",
+    "path": "/movie",
     "icon": "fas fa-desktop"
   },
   {
     "id": 2,
     "title": "ფილმები",
-    "path": "./page2",
+    "path": "/movie",
     "icon": "far fa-film",
     "submenu": {
       "title1": "ქართულად გახმოვანებული",
@@ -21,7 +21,7 @@
   {
     "id": 3,
     "title": "სერიალები",
-    "path": "./page2",
+    "path": "/movie",
 
     "icon": "fal fa-play-circle",
     "submenu": {
@@ -32,14 +32,14 @@
   {
     "id": 4,
     "title": "cinema",
-    "path": "./page2",
+    "path": "/movie",
 
     "icon": "far fa-camera-polaroid"
   },
   {
     "id": 5,
     "title": "საბავშვო",
-    "path": "./page2",
+    "path": "/movie",
 
     "icon": "far fa-laugh"
   }

@@ -3,10 +3,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 20px;
 }
 .slider-row {
   width: 885px;
-  max-width: 885px;
+  max-width: 883px;
   overflow: hidden;
   /* top right bottom left */
   margin-top: 30px;
@@ -26,7 +27,7 @@
 }
 .rowIcon {
   font-size: 20px;
-  color: rgb(148, 148, 148);
+  color: rgb(124, 116, 116);
   cursor: pointer;
 }
 .rowIcon:hover {
@@ -60,48 +61,83 @@
 
 .main-desc {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+  top: 0;
+  right: -330px;
+  width: 300px;
   height: 100%;
-  border: 1px solid rgb(202, 202, 202);
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   border-radius: 4px;
-  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.14);
-  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.14);
+  padding: 0px 10px;
+  z-index: 2;
+  cursor: default;
 }
 
-.main-desc button {
+.left {
+  left: -330px;
+}
+
+.main-desc h2 {
+  margin-top: 10px;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.details-box-hover {
+  width: 100%;
+}
+/* single  */
+
+.detail-hover-dec {
+  display: flex;
+  align-items: center;
   width: 100%;
   height: 20px;
+}
+.detail-hover-dec h4 {
+  font-size: 12px;
+  color: rgb(92, 89, 86);
+  cursor: text;
+}
+.detail-hover-dec h6 {
+  font-size: 12px;
+  color: #1683c6;
+  margin-left: 6px;
   cursor: pointer;
 }
 
-.main-desc h1 {
-  font-weight: bold;
-  cursor: initial;
-  font-size: 12px;
-  padding: 10px;
-  color: rgb(17, 17, 17);
+.hover-desc-button {
+  border: 1px solid #1683c6;
+  background-color: white;
+  cursor: pointer;
 }
 
-.main-desc p {
-  font-size: 10px;
-  padding: 10px;
-  cursor: initial;
-  color: rgb(34, 33, 33);
-}
-
-.desc-info {
+.hover-overlay {
+  position: absolute;
   display: flex;
-  justify-content: space-between;
-  margin-top: 50px;
-  background-color: #009155;
-}
-.desc-info p {
-  color: white;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.521);
 }
 
+.ic {
+  font-size: 50px;
+  color: #1683c6;
+}
+
+.hover-spacing {
+  position: absolute;
+  top: 0;
+  right: -20px;
+  width: 30px;
+  height: 100%;
+}
+
+.left-spacing {
+  left: -20px;
+}
 /* Break */
 @media (max-width: 800px) {
   .rowIcon {
@@ -113,5 +149,13 @@
   .bottop-section {
     overflow: auto scroll;
     overflow-y: hidden;
+  }
+
+  .main-desc {
+    display: none;
+  }
+
+  .ic:hover {
+    color: #1683c6;
   }
 }
