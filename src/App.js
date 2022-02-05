@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import "./App.css";
+import Footer from "./Components/Footer/Footer";
 import Header from "./Components/Header/Header";
 import MobileHeader from "./Components/Header/MobileHeader";
 import Homepage from "./Components/Pages/Homepage";
@@ -24,17 +25,24 @@ function App() {
   return (
     <Router forceRefresh>
       {windowWidth > 800 ? <Header /> : <MobileHeader />}
-      <Route exact path={"/"}>
-        <Homepage />
-      </Route>
+      <Switch>
+        <Route exact path={"/"}>
+          <Homepage />
+        </Route>
 
-      <Route path={"/movie/:id"}>
-        <Movie />
-      </Route>
+        <Route path={"/movie/:id"}>
+          <Movie />
+        </Route>
 
-      <Route path={"/404"}>
-        <PageNotFound />
-      </Route>
+        <Route path={"/404"}>
+          <PageNotFound />
+        </Route>
+
+        <Route path='*'>
+          <PageNotFound />
+        </Route>
+      </Switch>
+      <Footer />
     </Router>
   );
 }

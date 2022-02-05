@@ -41,7 +41,7 @@ function Header() {
               >
                 <li className='menu-list'>
                   <NavLink
-                    activeClassName='active'
+                    activeClassName='active-navlinks'
                     className={navbar ? "navlink scrolled" : "navlink"}
                     exact
                     to={path || "./"}

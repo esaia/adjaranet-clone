@@ -24,8 +24,6 @@ function Movie(props) {
     fetchData();
   }, []);
 
-  console.log(loading);
-
   useEffect(() => {
     async function fetchData() {
       const request = await axios.get(
@@ -40,7 +38,9 @@ function Movie(props) {
   }, []);
 
   if (!id) {
-    return <Redirect to={{ pathname: "/404" }} />;
+    return (
+      <Redirect to={{ pathname: "/http://localhost:3000/pagenotfount" }} />
+    );
   }
 
   return (

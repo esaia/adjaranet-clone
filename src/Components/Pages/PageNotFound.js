@@ -2,8 +2,19 @@ import React from "react";
 
 function PageNotFound() {
   return (
-    <div>
-      <h1>page not found</h1>
+    <div
+      style={{
+        width: "100%",
+        height: "60vh",
+
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        color: "black",
+        fontSize: "30px",
+      }}
+    >
+      <h1>Page Not Found...</h1>
     </div>
   );
 }
