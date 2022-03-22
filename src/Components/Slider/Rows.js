@@ -4,7 +4,6 @@ import requests from "../../Requests";
 import { FaAngleRight, FaAngleLeft } from "react-icons/fa";
 import "./Rows.css";
 import MovideDesc from "./MovideDesc";
-import { Defaultimages } from "./Defaultimages";
 import { DefaultData } from "../../DefaultData";
 import { FaRegPlayCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -25,12 +24,12 @@ function Rows({ title, fetchURL }) {
   }, [fetchURL]);
 
   const handleclick = (direction) => {
-    if (direction === "left" && translateX != 0) {
+    if (direction === "left" && translateX !== 0) {
       settranslateX(translateX + 875);
       const x = translateX + 875;
       listref.current.style.transform = `translateX(${x}px)`;
     }
-    if (direction === "right" && translateX != -2625) {
+    if (direction === "right" && translateX !== -2625) {
       settranslateX(translateX - 875);
       const x = translateX - 875;
       listref.current.style.transform = `translateX(${x}px)`;

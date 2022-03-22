@@ -160,13 +160,15 @@
   }
 
   .row-item {
-    width: 120px;
-    height: 150px;
+    width: 200px;
+
+    margin-left: 20px;
   }
 
   .row-img {
-    width: 120px;
-    height: 150px;
+    width: 200px;
+
+    height: 100%;
     cursor: default;
   }
 }

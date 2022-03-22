@@ -6,11 +6,12 @@ import { DefaultData } from "../../DefaultData";
 import { FaAngleRight, FaAngleLeft } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-function Sprow({ title, fetchURL }) {
+function Sprow({ title, fetchURL, fetchURL2 }) {
   const [movies, setMovies] = useState(DefaultData);
+  const [movies2, setMovies2] = useState(DefaultData);
   const [translateX, settranslateX] = useState(0);
   const listref = useRef();
-  console.log(translateX);
+  // movie
   useEffect(() => {
     async function fetchData() {
       const request = await axios.get(fetchURL);
@@ -20,21 +21,31 @@ function Sprow({ title, fetchURL }) {
 
     fetchData();
   }, [fetchURL]);
+  // movie 2
+  useEffect(() => {
+    async function fetchData() {
+      const request = await axios.get(fetchURL2);
+      setMovies2(request.data.results);
+      return requests;
+    }
+
+    fetchData();
+  }, [fetchURL]);
 
   const handleclick = (direction) => {
-    if (direction === "left" && translateX != 0) {
+    if (direction === "left" && translateX !== 0) {
       settranslateX(translateX + 900);
       const x = translateX + 900;
       listref.current.style.transform = `translateX(${x}px)`;
     }
-    if (direction === "right" && translateX != -900) {
+    if (direction === "right" && translateX !== -900) {
       settranslateX(translateX - 900);
       const x = translateX - 900;
       listref.current.style.transform = `translateX(${x}px)`;
     }
   };
 
-  const small_movie_array = movies.slice(1, 17);
+  const small_movie_array = movies.concat(movies2).slice(1, 34);
   return (
     <div className='sprow-section'>
       <div className='whole-div'>
@@ -92,6 +103,20 @@ function Sprow({ title, fetchURL }) {
               </div>
             );
           })}
+
+          <div className='box2'>
+            <Link to={"/movie/" + movies2[0].id}>
+              <img
+                src={
+                  movies[0].img ||
+                  `https://image.tmdb.org/t/p/original/${movies2[0]?.backdrop_path}`
+                }
+                alt=''
+                className='sprow-img'
+              />
+              <h1 className='sprow-title'>{movies2[0].title}</h1>
+            </Link>
+          </div>
         </div>
       </div>
     </div>

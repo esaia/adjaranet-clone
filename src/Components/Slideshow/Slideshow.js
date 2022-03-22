@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Slideshow.css";
-import { FaAngleLeft, FaAngleRight, FaRegPlayCircle } from "react-icons/fa";
+import { FaRegPlayCircle } from "react-icons/fa";
 import Slider from "react-slick";
 import axios from "../../axios";
 import requests from "../../Requests";

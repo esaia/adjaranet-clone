@@ -4,7 +4,6 @@ import "./Movie.css";
 import Search from "../Slideshow/Search";
 import YouTube from "react-youtube";
 import Rows from "../Slider/Rows";
-import requests from "../../Requests";
 import axios from "../../axios";
 
 function Movie(props) {
