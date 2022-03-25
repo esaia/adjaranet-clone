@@ -5,7 +5,8 @@ import Search from "../Slideshow/Search";
 import YouTube from "react-youtube";
 import Rows from "../Slider/Rows";
 import axios from "../../axios";
-
+import { Sentry } from "react-activity";
+import "react-activity/dist/library.css";
 function Movie(props) {
   const [movies, setMovie] = useState([]);
   const [video, setVideo] = useState([]);
@@ -46,7 +47,7 @@ function Movie(props) {
     <div>
       {loading ? (
         <div className='loading'>
-          <h1>Loading...</h1>
+          <Sentry />
         </div>
       ) : (
         <div>

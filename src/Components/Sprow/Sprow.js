@@ -6,21 +6,11 @@ import { DefaultData } from "../../DefaultData";
 import { FaAngleRight, FaAngleLeft } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-function Sprow({ title, fetchURL, fetchURL2 }) {
-  const [movies, setMovies] = useState(DefaultData);
+function Sprow({ title, fetchURL, fetchURL2, movies }) {
   const [movies2, setMovies2] = useState(DefaultData);
   const [translateX, settranslateX] = useState(0);
   const listref = useRef();
-  // movie
-  useEffect(() => {
-    async function fetchData() {
-      const request = await axios.get(fetchURL);
-      setMovies(request.data.results);
-      return requests;
-    }
 
-    fetchData();
-  }, [fetchURL]);
   // movie 2
   useEffect(() => {
     async function fetchData() {
