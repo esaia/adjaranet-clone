@@ -9,8 +9,24 @@ import Homepage from "./Components/Pages/Homepage";
 import Movie from "./Components/Pages/Movie";
 import PageNotFound from "./Components/Pages/PageNotFound";
 
+import ProgressBar from "@badrap/bar-of-progress";
 function App() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const progress = new ProgressBar({
+    size: 2,
+    color: "#1683c6",
+    style: "progressbar",
+    delay: 100,
+  });
+
+  useEffect(() => {
+    progress.start();
+  });
+
+  setTimeout(() => {
+    progress.finish();
+  }, 1000);
+
   useEffect(() => {
     window.addEventListener("resize", updateWindowWidth);
 
