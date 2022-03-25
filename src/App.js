@@ -16,7 +16,7 @@ function App() {
     size: 2,
     color: "#1683c6",
     style: "progressbar",
-    delay: 100,
+    delay: 800,
   });
 
   useEffect(() => {
